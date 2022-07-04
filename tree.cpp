@@ -165,7 +165,6 @@ int numLeafNodes(TreeNode<int>* root) {
 void postOrder(TreeNode<int>* root) {
     /* post Order Traversal recursive */
     if(root==nullptr) return;
-    int result = root->data; // root node
     int childCount = root->children.size();
     for(int i=0; i<childCount; i++)
         postOrder(root->children[i]);
