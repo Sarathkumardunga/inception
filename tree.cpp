@@ -310,7 +310,7 @@ TreeNode <int>* secondLargest(TreeNode<int> *root) {
                     secLargest = largest;
                     largest = curr->children[i];
                 }
-                else
+                else if(curr->children[i]->data < largest->data)   // we shouldn't update the seclargest if same value is present in the tree
                 {
                     secLargest = curr->children[i];
                 }
